@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut-icon"  type="x-icon"   href="logo_1.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> Login Page</title>
+    <link rel="stylesheet" href="style.css">
+
+ 
+
+</head>
+<body>
+
+    <div class="sign-up">
+        <h1>SignUp </h1>
+        <form onsubmit="Signup(event)">
+            <input type="text" class="email" id="email" placeholder="Enter your email"><br><br>
+            <input type="password" id="password" placeholder="Enter your password"><br><br>
+            <button type="submit">Submit</button><br><br>
+        </form>
+    </div>
+
+<br><br><br>
+
+
+
+    <div class="Login">
+        <h1>Login</h1>
+        <form onsubmit="Login(event)">
+            <input type="text" class="email" id="Login-email" placeholder="Enter your email"><br><br>
+            <input type="password" id="Login-password" placeholder="Enter your password"><br><br>
+            <button type="submit">Login</button><br><br>
+            <button onclick="Logout()">Logout</button>
+            </form>
+    </div>
+
+
+<!-- <br><br> -->
+    <hr>
+<div class="center">
+    <h2>YOU ACCOUNT DETAILS </h2>
+    <img src="IMG-20240724-WA0010.jpg" 
+    height="auto" id="propic" width="40%"  alt="" style="border-radius: 60%; box-shadow: 0 0 5px rgb(68, 49, 8) ,
+    0 0 25px blue , 0 0 50px rgb(9, 9, 10),
+    0 0 100px rgb(34, 34, 36), 0 0 200px rgb(68, 49, 8)">
+     <input type="file" accept="image/*" onchange="uploadimg(event)">
+    <div id="userdetails"></div>
+</div>
+<br><br>
+<hr>
+
+<div id="model">
+    <h1>user deatils</h1>
+    <form  action="" id="editsprofile" onsubmit="userupdate(event)"> 
+        <input type="text" name="name" placeholder="name"><br><br>
+        <input type="email" name="email" placeholder="email" ><br><br>
+        <input type="number" name="phone" placeholder=" phone number"><br><br>
+        <input type="text" name="speciality" placeholder="speciality"><br><br>
+        <input type="text" name="portfolioUrl" placeholder="portfolioUrl"><br><br>
+        <input type="text" name="gender" placeholder="gender"><br><br>
+        <button>SUBMIT</button>
+        
+        
+    </form>
+</div>
+ <script src="index.js"></script>
+    <script src="firebase_db.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+ <SCRipt>
+     const firebaseConfig = {
+            apiKey: "AIzaSyAwejk4eISvgttQpezy8jr-OHBwByiDM_w",
+            authDomain: "user-49ab0.firebaseapp.com",
+            projectId: "user-49ab0",
+            storageBucket: "user-49ab0.appspot.com",
+            messagingSenderId: "664922118029",
+            appId: "1:664922118029:web:64a73d9c64645fce7b8fc4",
+            measurementId: "G-LPLXKR2649"
+        };
+ 
+  firebase.initializeApp(firebaseConfig);
+ </SCRipt>
+    
+</body>
+</html>
